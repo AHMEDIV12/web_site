@@ -170,7 +170,7 @@
                                 </ul>
                             </li>
                             <li class="menu-item">
-                                <a href="about-us.html">about</a>
+                                <a href="{{route('about.index')}}">about</a>
                             </li>
                             <li class="menu-item menu-item-has-children">
                                 <a href="#" data-toggle="collapse" data-target="#sub2" aria-expanded="true" aria-controls="sub2">Project</a>

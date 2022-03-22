@@ -179,11 +179,7 @@
         <div class="modal fade" style="background-color:rgb(143 86 86 / 0%);"
             id="field{{$field->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content" style="
-                                                background-color: rgb(215 215 215);
-                                                border: 1px solid #eeeeee4a;
-                                                padding: 22px;
-                                                padding-bottom: 3px;">
+                <div class="modal-content modal-style">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Edit Field</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">

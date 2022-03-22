@@ -104,7 +104,7 @@ class ReviewController extends Controller
 
         $target_review->update($data);
 
-        session()->flash('success', 'you updated a Review successflly');
+        session()->flash('success', 'you updated a main view successflly');
 
         return redirect(route('main'));
     }

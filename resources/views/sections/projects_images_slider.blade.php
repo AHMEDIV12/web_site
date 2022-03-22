@@ -158,17 +158,6 @@
                     </button>
                 </div>
                 
-                    @if($errors->any())
-                        @foreach ($errors->all() as $error)
-                            <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
-                                <strong>{{$error}}!</strong> You should check in on some of those fields below.
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                        @endforeach
-                    @endif
-
                 <form id="projectupdate" action="{{route('projects.update' , $project->id)}}"  method="post" enctype="multipart/form-data">
                     @csrf
                     @method('put')

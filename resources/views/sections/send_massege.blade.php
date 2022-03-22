@@ -20,8 +20,10 @@
 
                 <div class="section-content">
                     <div class="container">
-                        <div class="map-wrapper js-google-map m-b-60" data-makericon="images/icon/marker.png" data-makers="[[&quot;TATEE&quot;, &quot;Now that you visited our website,&lt;br&gt; how about checking out our office too?&quot;, 40.715681, -74.003427]]">
-                            <div class="map__holder js-map-holder" id="map" style="height: 370px;"></div>
+                        <div class="map-wrapper js-google-map m-b-60 d-flex justify-content-center align-items-center" data-makericon="images/icon/marker.png" data-makers="[[&quot;TATEE&quot;, &quot;Now that you visited our website,&lt;br&gt; how about checking out our office too?&quot;, 40.715681, -74.003427]]">
+                            {{-- <div class="map__holder js-map-holder" id="map" > --}}
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2094872.4080520659!2d30.793434014229877!3d30.420002869139314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584090bf1ddad7%3A0xe622553505d823f5!2s1-6%20Habib%20Ln%2C%20Bab%20El%20Sharia%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1647703867014!5m2!1sen!2seg" width="85%" height="95%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            {{-- </div> --}}
                         </div>
                         <div class="row no-gutters">
                             <div class="col-lg-4">
@@ -61,3 +63,11 @@
                     </div>
                 </div>
             </section>
+
+
+
+
+
+
+
+

@@ -19,12 +19,12 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $all_reviews = Review::all();
-        $all_sponsers = Sponser::all();
-        $all_whyus = WhyUs::all();
-        $all_projects = ProjectImageSlider::all();
-        $all_views = MainView::all();
-        $all_fields = Fields_Of_Work::all();
+        $all_reviews    = Review::all();
+        $all_sponsers   = Sponser::all();
+        $all_whyus      = WhyUs::all();
+        $all_projects   = ProjectImageSlider::all();
+        $all_views      = MainView::all();
+        $all_fields     = Fields_Of_Work::all();
         return view('home_vertical_slide',
         compact('all_views', 'all_fields','all_projects','all_whyus','all_sponsers','all_reviews'));
     }
