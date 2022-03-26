@@ -262,39 +262,63 @@
                 <div class="modal-body text-bold">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Project Name</label>
-                        <input name="project_name" type="text" class="form-control" id="addField" aria-describedby="emailHelp" >
+                        <input name="project_name" type="text" class="form-control" id="addField" aria-describedby="emailHelp" required >
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Project Adress</label>
-                        <input name="project_adress" type="text" class="form-control fit-content"  id="exampleInputPassword1">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Client Name</label>
-                        <input name="client_name" type="text" class="form-control fit-content"  id="exampleInputPassword1">
+                    <div  class="form-group justify-between">
+                        <div>
+                            <label for="exampleInputPassword1">Project Adress</label>
+                            <input name="project_adress" type="text" class="form-control fit-content"  id="exampleInputPassword1"  required>
+                        </div>
+                        <div >
+                            <label for="exampleInputPassword1">Client Name</label>
+                            <input name="client_name" type="text" class="form-control fit-content"  id="exampleInputPassword1" required>
+                        </div>
                     </div>
                     <div class="form-group justify-between">
                         <div>
                             <label for="exampleInputPassword1">Project Status</label>
-                            <input name="project_status" type="text" class="form-control fit-content"   id="exampleInputPassword1">
+                            <input name="project_status" type="text" class="form-control fit-content"   id="exampleInputPassword1" required>
                         </div>
                         <div>
                             <label for="exampleInputPassword1">Project Date</label>
-                            <input name="project_date" type="text" class="form-control fit-content" placeholder="yy\mm\dd"  id="exampleInputPassword1">
+                            <input name="project_date" type="text" class="form-control fit-content" placeholder="yy\mm\dd"  id="exampleInputPassword1" required>
                         </div>
+                    </div>
+                    <div class="form-group justify-between">
+                        <div>
+                            <label for="exampleInputPassword1">Facebook Link</label>
+                            <input name="fb_link" type="text" class="form-control fit-content"   id="exampleInputPassword1">
                         </div>
+                        <div>
+                            <label for="exampleInputPassword1">Instgram Link</label>
+                            <input name="insta_link" type="text" class="form-control fit-content"  id="exampleInputPassword1">
+                        </div>
+                    </div>
+                    <div class="form-group justify-between">
+                        <div>
+                            <label for="exampleInputPassword1">Twiter Link</label>
+                            <input name="twiter_link" type="text" class="form-control fit-content"   id="exampleInputPassword1">
+                        </div>
+                        <div>
+                            <label for="exampleInputPassword1">Google Link</label>
+                            <input name="google_link" type="text" class="form-control fit-content"  id="exampleInputPassword1">
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Project Discreption</label>
-                        <textarea name="project_disc" type="text" class="form-control fit-content" rows="3"  id="exampleInputPassword1"></textarea>
+                        <textarea name="project_disc" type="text" class="form-control fit-content"   id="exampleInputPassword1"></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlFile1" class="mb-0 pt-1">Cover Image</label>
-                        <p class="text-sm">image size should be 1170 * 623 </p>
-                        <input name="cover_img" type="file" class="form-control-file fit-content" id="exampleFormControlFile1">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlFile1" class="mb-0 pt-1">Choose Multiple Images</label>
-                        <p class="text-sm">image size should be 1170 * 623 </p>
-                        <input name="img[]" type="file" class="form-control-file fit-content" multiple="multiple" id="exampleFormControlFile1">
+                    <div class="form-group justify-between" >
+                        <div>
+                            <label for="exampleFormControlFile1" class="mb-0 pt-1">Cover Image</label>
+                            <p class="text-sm">image size should be 1170 * 623 </p>
+                            <input name="cover_img" type="file" class="form-control-file fit-content" id="exampleFormControlFile1">
+                        </div>
+                        <div>
+                            <label for="exampleFormControlFile1" class="mb-0 pt-1">Choose Multiple Images</label>
+                            <p class="text-sm">image size should be 1170 * 623 </p>
+                            <input name="img[]" type="file" class="form-control-file fit-content" multiple="multiple" id="exampleFormControlFile1">
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -363,27 +387,62 @@
                                 <label for="exampleInputEmail1">Project Name</label>
                                 <input name="project_name" type="text" class="form-control" value="{{$project_meta['project_name']}}" id="addField" aria-describedby="emailHelp"  >
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Project Adress</label>
-                                <input name="project_adress" type="text" class="form-control fit-content" value="{{$project_meta['project_adress']}}"  id="exampleInputPassword1">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Client Name</label>
-                                <input name="client_name" type="text" class="form-control fit-content" value="{{$project_meta['client_name']}}" id="exampleInputPassword1">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Project Status</label>
-                                <input name="project_status" type="text" class="form-control fit-content" value="{{$project_meta['project_status']}}"  id="exampleInputPassword1">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Project Discreption</label>
-                                <textarea name="project_disc" type="text" class="form-control fit-content" rows="3" id="exampleInputPassword1">{{$project_meta['project_disc']}}</textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleFormControlFile1" class="mb-0 pt-1">Pick an Image</label>
-                                <p class="text-sm">image size should be 1170 * 623 </p>
-                                <input name="img[]" type="file" class="form-control-file fit-content" multiple="multiple" id="exampleFormControlFile1">
-                            </div>
+                    <div  class="form-group justify-between">
+                        <div>
+                            <label for="exampleInputPassword1">Project Adress</label>
+                            <input name="project_adress" type="text" class="form-control fit-content" value="{{$project_meta['project_adress']}}" id="exampleInputPassword1"  required>
+                        </div>
+                        <div >
+                            <label for="exampleInputPassword1">Client Name</label>
+                            <input name="client_name" type="text" class="form-control fit-content" value="{{$project_meta['client_name']}}"  id="exampleInputPassword1" required>
+                        </div>
+                    </div>
+                    <div class="form-group justify-between">
+                        <div>
+                            <label for="exampleInputPassword1">Project Status</label>
+                            <input name="project_status" type="text" class="form-control fit-content" value="{{$project_meta['project_status']}}"   id="exampleInputPassword1" required>
+                        </div>
+                        <div>
+                            <label for="exampleInputPassword1">Project Date</label>
+                            <input name="project_date" type="text" class="form-control fit-content"  value="{{$project_meta['project_date']}}"  id="exampleInputPassword1" required>
+                        </div>
+                    </div>
+                    <div class="form-group justify-between">
+                        <div>
+                            <label for="exampleInputPassword1">Facebook Link</label>
+                            <input name="fb_link" type="text" class="form-control fit-content"  value="{{isset($project_meta['fb_link']) ? $project_meta['project_date'] : ''}}"   id="exampleInputPassword1">
+                        </div>
+                        <div>
+                            <label for="exampleInputPassword1">Instgram Link</label>
+                            <input name="insta_link" type="text" class="form-control fit-content"  value="{{isset($project_meta['insta_link']) ? $project_meta['project_date'] : ''}}"  id="exampleInputPassword1">
+                        </div>
+                    </div>
+                    <div class="form-group justify-between">
+                        <div>
+                            <label for="exampleInputPassword1">Twiter Link</label>
+                            <input name="twiter_link" type="text" class="form-control fit-content"  value="{{isset($project_meta['twiter_link']) ? $project_meta['project_date'] : ''}}"   id="exampleInputPassword1">
+                        </div>
+                        <div>
+                            <label for="exampleInputPassword1">Google Link</label>
+                            <input name="google_link" type="text" class="form-control fit-content"  value="{{isset($project_meta['google_link']) ? $project_meta['project_date'] : ''}}"  id="exampleInputPassword1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Project Discreption</label>
+                        <textarea name="project_disc" type="text" class="form-control fit-content"  value="{{$project_meta['project_disc']}}"   id="exampleInputPassword1"></textarea>
+                    </div>
+                    <div class="form-group justify-between" >
+                        <div>
+                            <label for="exampleFormControlFile1" class="mb-0 pt-1">Cover Image</label>
+                            <p class="text-sm">image size should be 1170 * 623 </p>
+                            <input name="cover_img" type="file" class="form-control-file fit-content" id="exampleFormControlFile1">
+                        </div>
+                        <div>
+                            <label for="exampleFormControlFile1" class="mb-0 pt-1">Choose Multiple Images</label>
+                            <p class="text-sm">image size should be 1170 * 623 </p>
+                            <input name="img[]" type="file" class="form-control-file fit-content" multiple="multiple" id="exampleFormControlFile1">
+                        </div>
+                    </div>
                         </div>
                         <div class="modal-footer">
                             <button  class="btn modal-btn" data-dismiss="modal">Close</button>

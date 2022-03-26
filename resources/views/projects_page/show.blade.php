@@ -55,22 +55,22 @@
                                     <span class="key">Share :</span>
                                     <ul class="list-social list-social--md">
                                         <li class="list-social__item">
-                                            <a class="ic-fb" href="#">
+                                            <a class="ic-fb" href="{{isset($project_meta['fb_link']) ? $project_meta['fb_link'] : '#' }}">
                                                 <i class="zmdi zmdi-facebook"></i>
                                             </a>
                                         </li>
                                         <li class="list-social__item">
-                                            <a class="ic-insta" href="#">
+                                            <a class="ic-insta" href="{{isset($project_meta['insta_link']) ? $project_meta['insta_link'] : '#' }}">
                                                 <i class="zmdi zmdi-instagram"></i>
                                             </a>
                                         </li>
                                         <li class="list-social__item">
-                                            <a class="ic-twi" href="#">
+                                            <a class="ic-twi" href="{{isset($project_meta['twiter_link']) ? $project_meta['twiter_link'] : '#' }}">
                                                 <i class="zmdi zmdi-twitter"></i>
                                             </a>
                                         </li>
                                         <li class="list-social__item">
-                                            <a class="ic-pinterest" href="#">
+                                            <a class="ic-pinterest" href="{{isset($project_meta['google_link']) ? $project_meta['google_link'] : '#' }}">
                                                 <i class="zmdi zmdi-pinterest"></i>
                                             </a>
                                         </li>
