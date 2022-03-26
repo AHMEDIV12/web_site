@@ -28,29 +28,38 @@ Route::group([''], function () {
 
 
 // ABOUT PAGE ROUTES
-Route::group([''], function () {
-    Route::resource('about',           'About_page\MainController');
-    
-    // HEADER routes
-    Route::post('about/header',        'About_page\MainController@header_store')   ->name('header_store');
-    Route::put('about/header/{id}',    'About_page\MainController@header_update')  ->name('header_update');
-    
-    // ABOUT_US routes
-    Route::post('about/us',            'About_page\MainController@about_us_store') ->name('about_us_store');
-    
-    // SERVICE routes
-    Route::post('about/services',      'About_page\MainController@service_store')  ->name('service_store');
-    Route::post('about/update/{id}',   'About_page\MainController@service_update') ->name('service_update');
-    Route::delete('about/service/{id}','About_page\MainController@service_delete') ->name('service_delete');
-    
-    // CLIENTS routes
-    Route::post('about/clints',        'About_page\MainController@client_store')   ->name('client_store');
-    Route::post('about/clint_bg',        'About_page\MainController@client_bg_store')   ->name('client_bg_store');
-    Route::post('about/clints/{id}',   'About_page\MainController@client_update')  ->name('client_update');
-    Route::delete('about/clint/{id}','About_page\MainController@client_delete')  ->name('client_delete');
-    Route::post('about/team',        'About_page\MainController@team_store')   ->name('team_store');
-    Route::post('about/team/{id}',   'About_page\MainController@team_update')  ->name('team_update');
-    Route::delete('about/teams/{id}','About_page\MainController@team_delete')  ->name('team_delete');
+Route::group([''], function () 
+    {
+
+        Route::resource('about',           'AboutController');
+        
+        // HEADER routes
+        Route::post('about/header',        'AboutController@header_store')  ->name('header_store');
+        Route::put('about/header/{id}',    'AboutController@header_update') ->name('header_update');
+        
+        // ABOUT_US routes
+        Route::post('about/us',            'AboutController@about_us_store')->name('about_us_store');
+        
+        // SERVICE routes
+        Route::post('about/services',      'AboutController@service_store') ->name('service_store');
+        Route::post('about/update/{id}',   'AboutController@service_update')->name('service_update');
+        Route::delete('about/service/{id}','AboutController@service_delete')->name('service_delete');
+        
+        // CLIENTS routes
+        Route::post('about/clints',      'AboutController@client_store')   ->name('client_store');
+        Route::post('about/clint_bg',    'AboutController@client_bg_store')->name('client_bg_store');
+        Route::post('about/clints/{id}', 'AboutController@client_update')  ->name('client_update');
+        Route::delete('about/clint/{id}','AboutController@client_delete')  ->name('client_delete');
+        Route::post('about/team',        'AboutController@team_store')     ->name('team_store');
+        Route::post('about/team/{id}',   'AboutController@team_update')    ->name('team_update');
+        Route::delete('about/teams/{id}','AboutController@team_delete')    ->name('team_delete');
+
+    });
+
+
+    Route::group([''], function () {
+        Route::resource('all_projects' , 'ProjectController');
+        Route::post('all_projects/head' , 'ProjectController@header_store')->name('header_store');
     });
 
 

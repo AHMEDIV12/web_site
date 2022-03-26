@@ -129,7 +129,7 @@
                     <nav class="menu-sidebar-nav-menu">
                         <ul class="menu nav-menu" id="nav-menu-sidebar">
                             <li class="menu-item menu-item-has-children">
-                                <a href="#" data-toggle="collapse" data-target="#sub1" aria-expanded="true" aria-controls="sub1">Home</a>
+                                <a href="{{route('main')}}" data-toggle="collapse" data-target="#sub1" aria-expanded="true" aria-controls="sub1">Home</a>
                                 <ul class="sub-menu collapse" id="sub1" data-parent="#nav-menu-sidebar">
                                     <li class="menu-item">
                                         <a href="home-main.html">Main home</a>
@@ -173,8 +173,8 @@
                                 <a href="{{route('about.index')}}">about</a>
                             </li>
                             <li class="menu-item menu-item-has-children">
-                                <a href="#" data-toggle="collapse" data-target="#sub2" aria-expanded="true" aria-controls="sub2">Project</a>
-                                <ul class="sub-menu collapse" id="sub2" data-parent="#nav-menu-sidebar">
+                                <a href="{{route('all_projects.index')}}" data-toggle="collapse" data-target="#sub2" aria-expanded="true" aria-controls="sub2">Project</a>
+                                {{-- <ul class="sub-menu collapse" id="sub2" data-parent="#nav-menu-sidebar">
                                     <li class="menu-item">
                                         <a href="project-grid-full.html">Project grid fullwidth</a>
                                     </li>
@@ -199,7 +199,7 @@
                                     <li class="menu-item">
                                         <a href="project-detail-4.html">Project detail v4</a>
                                     </li>
-                                </ul>
+                                </ul> --}}
                             </li>
                             <li class="menu-item menu-item-has-children">
                                 <a href="#" data-toggle="collapse" data-target="#sub3" aria-expanded="true" aria-controls="sub3">pages</a>
@@ -226,7 +226,7 @@
                             </li>
                             <li class="menu-item menu-item-has-children">
                                 <a href="#" data-toggle="collapse" data-target="#sub4" aria-expanded="true" aria-controls="sub4">blog</a>
-                                <ul class="sub-menu collapse" id="sub4" data-parent="#nav-menu-sidebar">
+                                {{-- <ul class="sub-menu collapse" id="sub4" data-parent="#nav-menu-sidebar">
                                     <li class="menu-item">
                                         <a href="blog-grid.html">blog grid</a>
                                     </li>
@@ -245,7 +245,7 @@
                                     <li class="menu-item">
                                         <a href="blog-detail-video.html">blog detail video</a>
                                     </li>
-                                </ul>
+                                </ul> --}}
                             </li>
                             <li class="menu-item">
                                 <a href="contact.html">contact</a>
@@ -306,8 +306,8 @@
                     <div class="container-fluid">
                         <ul class="menu nav-menu menu-mobile">
                             <li class="menu-item menu-item-has-children">
-                                <a href="home-main.html">Home</a>
-                                <ul class="sub-menu">
+                                <a href="{{route('main')}}">Home</a>
+                                {{-- <ul class="sub-menu">
                                     <li class="menu-item">
                                         <a href="home-main.html">Main home</a>
                                     </li>
@@ -344,14 +344,14 @@
                                     <li class="menu-item">
                                         <a href="index.html">Landing</a>
                                     </li>
-                                </ul>
+                                </ul> --}}
                             </li>
                             <li class="menu-item">
-                                <a href="about-us.html">about</a>
+                                <a href="{{route('about.index')}}">about</a>
                             </li>
                             <li class="menu-item menu-item-has-children">
-                                <a href="project-grid-full.html">Project</a>
-                                <ul class="sub-menu">
+                                <a href="{{route('all_projects.index')}}">Project</a>
+                                {{-- <ul class="sub-menu">
                                     <li class="menu-item">
                                         <a href="project-grid-full.html">Project grid fullwidth</a>
                                     </li>
@@ -381,11 +381,11 @@
                                             </li>
                                         </ul>
                                     </li>
-                                </ul>
+                                </ul> --}}
                             </li>
                             <li class="menu-item menu-item-has-children">
                                 <a href="my-account.html">pages</a>
-                                <ul class="sub-menu">
+                                {{-- <ul class="sub-menu">
                                     <li class="menu-item">
                                         <a href="my-account.html">my account</a>
                                     </li>
@@ -404,11 +404,11 @@
                                     <li class="menu-item">
                                         <a href="coming-soon.html">coming soon</a>
                                     </li>
-                                </ul>
+                                </ul> --}}
                             </li>
                             <li class="menu-item menu-item-has-children">
                                 <a href="blog-grid.html">blog</a>
-                                <ul class="sub-menu">
+                                {{-- <ul class="sub-menu">
                                     <li class="menu-item">
                                         <a href="blog-grid.html">blog grid</a>
                                     </li>
@@ -432,7 +432,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                </ul>
+                                </ul> --}}
                             </li>
                             <li class="menu-item">
                                 <a href="contact.html">contact</a>

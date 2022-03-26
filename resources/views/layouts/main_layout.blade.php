@@ -16,25 +16,25 @@
     {{--  font awesome 4  --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css" integrity="sha512-72McA95q/YhjwmWFMGe8RI3aZIMCTJWPBbV8iQY3jy1z9+bi6+jHnERuNrDPo/WGYEzzNs4WdHNyyEr/yXJ9pA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Icons font CSS-->
-    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
-    <link href="vendor/themify-font/themify-icons.css" rel="stylesheet" media="all">
+    <link href="{{asset('vendor/mdi-font/css/material-design-iconic-font.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('vendor/font-awesome-5/css/fontawesome-all.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('vendor/themify-font/themify-icons.css')}}" rel="stylesheet" media="all">
     <!-- Base fonts of theme-->
-    <link href="css/poppins-font.min.css" rel="stylesheet" media="all">
+    <link href="{{asset('css/poppins-font.min.css')}}" rel="stylesheet" media="all">
     <!-- Font special for pages-->
 
     <!-- Bootstrap CSS-->
-    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+    <link href="{{asset('vendor/bootstrap-4.1/bootstrap.min.css')}}" rel="stylesheet" media="all">
 
     <!-- Vendor CSS-->
-    <link href="vendor/animate.css/animate.min.css" rel="stylesheet" media="all">
-    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
-    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
-    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
-    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="{{asset('vendor/animate.css/animate.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('vendor/css-hamburgers/hamburgers.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('vendor/animsition/animsition.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('vendor/slick/slick.css')}}" rel="stylesheet" media="all">
+    <link href="{{asset('vendor/select2/select2.min.css')}}" rel="stylesheet" media="all">
 
     <!-- Main CSS-->
-    <link href="css/main.min.css" rel="stylesheet" media="all">
+    <link href="{{asset('css/main.min.css')}}" rel="stylesheet" media="all">
 
     <style>
     
@@ -81,6 +81,12 @@
     border-color: #6c757d;
     }
 
+    .justify-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+    }
+
     </style>
 
     @stack("css")
@@ -103,15 +109,15 @@
                             <div class="header__content">
                                 <div class="logo">
                                     <a href="#">
-                                        <img src="images/icon/logo-black.png" alt="Tatee" />
+                                        <img src="{{asset('images/icon/logo-black.png')}}" alt="Tatee" />
                                     </a>
                                 </div>
                                 <div class="header__content-right">
                                     <nav class="header-nav-menu">
                                         <ul class="menu nav-menu">
                                             <li class="menu-item menu-item-has-children">
-                                                <a href="home-main.html">Home</a>
-                                                <ul class="sub-menu">
+                                                <a href="{{route('main')}}">Home</a>
+                                                {{-- <ul class="sub-menu">
                                                     <li class="menu-item">
                                                         <a href="home-main.html">Main home</a>
                                                     </li>
@@ -148,14 +154,14 @@
                                                     <li class="menu-item">
                                                         <a href="index.html">Landing</a>
                                                     </li>
-                                                </ul>
+                                                </ul> --}}
                                             </li>
                                             <li class="menu-item">
-                                                <a href="about-us.html">about</a>
+                                                <a href="{{route('about.index')}}">about</a>
                                             </li>
                                             <li class="menu-item menu-item-has-children">
-                                                <a href="project-grid-full.html">Project</a>
-                                                <ul class="sub-menu">
+                                                <a href="{{route('all_projects.index')}}">Project</a>
+                                                {{-- <ul class="sub-menu">
                                                     <li class="menu-item">
                                                         <a href="project-grid-full.html">Project grid fullwidth</a>
                                                     </li>
@@ -185,11 +191,11 @@
                                                             </li>
                                                         </ul>
                                                     </li>
-                                                </ul>
+                                                </ul> --}}
                                             </li>
                                             <li class="menu-item menu-item-has-children">
                                                 <a href="my-account.html">pages</a>
-                                                <ul class="sub-menu">
+                                                {{-- <ul class="sub-menu">
                                                     <li class="menu-item">
                                                         <a href="my-account.html">my account</a>
                                                     </li>
@@ -208,11 +214,11 @@
                                                     <li class="menu-item">
                                                         <a href="coming-soon.html">coming soon</a>
                                                     </li>
-                                                </ul>
+                                                </ul> --}}
                                             </li>
                                             <li class="menu-item menu-item-has-children">
                                                 <a href="blog-grid.html">blog</a>
-                                                <ul class="sub-menu">
+                                                {{-- <ul class="sub-menu">
                                                     <li class="menu-item">
                                                         <a href="blog-grid.html">blog grid</a>
                                                     </li>
@@ -236,7 +242,7 @@
                                                             </li>
                                                         </ul>
                                                     </li>
-                                                </ul>
+                                                </ul> --}}
                                             </li>
                                             <li class="menu-item">
                                                 <a href="contact.html">contact</a>
@@ -283,7 +289,7 @@
                     <div class="container-fluid">
                         <div class="header-mobile__bar-inner">
                             <a class="logo" href="index.html">
-                                <img src="images/icon/logo-black.png" alt="Tatee" />
+                                <img src="{{asset('images/icon/logo-black.png')}}" alt="Tatee" />
                             </a>
                             <button class="hamburger hamburger--slider float-right" type="button">
                                 <span class="hamburger-box">
@@ -439,7 +445,7 @@
         @yield('content')
         <!-- END MAIN-->
 
-        <!-- FOOTER-->
+    <!-- FOOTER-->
         <footer class="footer bg-parallax">
             <div class="bg-overlay bg-overlay--p85"></div>
             <div class="container">
@@ -523,31 +529,90 @@
                 </div>
             </div>
         </footer>
-        <!-- END FOOTER-->
+    <!-- END FOOTER-->
     </div>
 
+
+    
+    {{--  sesion errors --}}
+    <div class="modal fade" style="background-color:rgb(143 86 86 / 0%);"
+            id="errors" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal-style">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ERROR</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-bold">
+                    @if($errors->any())
+                        @foreach ($errors->all() as $error)
+                            <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                                <strong>{{$error}}!</strong> You should check in on some of those fields below.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        @endforeach
+                    @endif
+                </div>
+
+                <div class="modal-footer">
+                    <button  class="btn modal-btn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end modal-->
+
+    {{--  sesion success message --}}
+    <div class="modal fade" style="background-color:rgb(143 86 86 / 0%);"
+            id="success_message" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal-style">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">MESSAGE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-bold">
+
+                    @if(session()->has('success'))
+                            <div class="alert alert-success text-center">
+                                {{ session()->get('success') }}
+                            </div>
+                    @endif
+                </div>
+
+                <div class="modal-footer">
+                    <button  class="btn modal-btn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end modal-->
+
     <!-- Jquery JS-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <!-- Bootstrap JS-->
-    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
-    <!-- Vendor JS-->
-    <script src="vendor/animsition/animsition.min.js"></script>
-    <script src="vendor/slick/slick.min.js"></script>
-    <script src="vendor/waypoints/jquery.waypoints.min.js"></script>
-    <script src="vendor/wow/wow.min.js"></script>
-    <script src="vendor/jquery.counterup/jquery.counterup.min.js"></script>
-    <script src="vendor/isotope/isotope.pkgd.min.js"></script>
-    <script src="vendor/isotope/imagesloaded.pkgd.min.js"></script>
-    <script src="vendor/matchHeight/jquery.matchHeight-min.js"></script>
-    <script src="vendor/select2/select2.min.js"></script>
-    <script src="vendor/sweetalert/sweetalert.min.js"></script>
-    <script src="vendor/noUiSlider/nouislider.min.js"></script>
+    <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+    <!-- Bootstra J-->
+    <script src="{{asset('vendor/bootstrap-4.1/bootstrap.min.js')}}"></script>
+    <!-- Vendor J-->
+    <script src="{{asset('vendor/animsition/animsition.min.js')}}"></script>
+    <script src="{{asset('vendor/slick/slick.min.js')}}"></script>
+    <script src="{{asset('vendor/waypoints/jquery.waypoints.min.js')}}"></script>
+    <script src="{{asset('vendor/wow/wow.min.js')}}"></script>
+    <script src="{{asset('vendor/jquery.counterup/jquery.counterup.min.js')}}"></script>
+    <script src="{{asset('vendor/isotope/isotope.pkgd.min.js')}}"></script>
+    <script src="{{asset('vendor/isotope/imagesloaded.pkgd.min.js')}}"></script>
+    <script src="{{asset('vendor/matchHeight/jquery.matchHeight-min.js')}}"></script>
+    <script src="{{asset('vendor/select2/select2.min.js')}}"></script>
+    <script src="{{asset('vendor/sweetalert/sweetalert.min.js')}}"></script>
+    <script src="{{asset('vendor/noUiSlider/nouislider.min.js')}}"></script>
 
     <!-- Main JS-->
-    <script src="js/global.js"></script>
+    <script src="{{asset('js/global.js')}}"></script>
 
     {{-- session flash masseges --}}
-    
     @if($errors->any())
         <script>
             $('#errors').modal('toggle')

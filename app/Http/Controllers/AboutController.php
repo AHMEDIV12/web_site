@@ -1,21 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\About_page;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\About_page\About;
+use App\About;
 
-class MainController extends Controller
+class AboutController extends Controller
 {
     public function index()
     {
-        $header    = About::where('section_key' , 'header')    ->first();
-        $about_us = About::where('section_key' , 'about_us')   ->first();
-        $all_services = About::where('section_key' , 'service')->orderBy('id', 'desc')->get();
-        $all_clients = About::where('section_key' , 'client')  ->get();
-        $client_bg = About::where('section_key' , 'client_img')  ->first();
-        $all_teams = About::where('section_key' , 'team')  ->get();
+        $header      = About::where('section_key' , 'header')    ->first();
+        $about_us    = About::where('section_key' , 'about_us')  ->first();
+        $all_services= About::where('section_key' , 'service')   ->orderBy('id', 'desc')->get();
+        $all_clients = About::where('section_key' , 'client')    ->get();
+        $client_bg   = About::where('section_key' , 'client_img')->first();
+        $all_teams   = About::where('section_key' , 'team')      ->get();
         return view('about_page.index',
         compact('header','about_us','all_services', 'all_clients','client_bg','all_teams'));
     }
@@ -108,7 +108,7 @@ class MainController extends Controller
         
         $data = [
             'section_key'=> 'service',
-            'meta'       => json_encode($request->except('_token')),
+            'meta'       => json_encode($request->except('_token','img')),
             'img'        =>$path,
         ];
         $new_service      = About::create($data);
@@ -127,7 +127,7 @@ class MainController extends Controller
         $path = 'storage/service_imgs/' . $request->file('img')->hashName();
         $data = [
             'section_key'=> 'service',
-            'meta'       => json_encode($request->except('_token')),
+            'meta'       => json_encode($request->except('_token','img')),
             'img'        =>$path, 
         ];
         $target_object->update($data);
@@ -239,7 +239,7 @@ class MainController extends Controller
         
         $data = [
             'section_key'=> 'team',
-            'meta'       => json_encode($request->except('_token')),
+            'meta'       => json_encode($request->except('_token','img')),
             'img'        =>$path, 
         ];
         $new_member      = About::create($data);
@@ -259,7 +259,7 @@ class MainController extends Controller
         $path = 'storage/member_imgs/' . $request->file('img')->hashName();
         $data = [
             'section_key'=> 'service',
-            'meta'       => json_encode($request->except('_token')),
+            'meta'       => json_encode($request->except('_token','img')),
             'img'        =>$path, 
         ];
         $target_object->update($data);

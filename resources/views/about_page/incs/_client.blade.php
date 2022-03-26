@@ -125,7 +125,7 @@
                     <div class="modal-body">
                         <div class="form-group">
                                 <label for="exampleFormControlFile1" class="mb-0 pt-1">Pick an Image</label>
-                                <p class="text-sm">image should LOGO </p>
+                                <p class="text-sm">image should png </p>
                                 <input name="img" type="file" class="form-control-file fit-content"  required>
                         </div>
                     </div>
@@ -155,7 +155,7 @@
                         <div class="modal-body">
                             <div class="form-group">
                                     <label for="exampleFormControlFile1" class="mb-0 pt-1">Pick an Image</label>
-                                    <p class="text-sm">image should LOGO </p>
+                                    <p class="text-sm">image should Be png </p>
                                     <input name="img" type="file" class="form-control-file fit-content"  required>
                             </div>
                         </div>

@@ -104,8 +104,7 @@
 
 
 
-            
-    <!-- PROJECT Create Modal -->
+<!-- PROJECT Create Modal -->
     <div class="modal fade" style="background-color:rgb(143 86 86 / 0%); " 
         id="addproject" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -128,6 +127,14 @@
                         <input name="project_adress" type="text" class="form-control fit-content"  placeholder="City - Country" id="exampleInputPassword1">
                     </div>
                     <div class="form-group">
+                        <label for="exampleInputPassword1">Client Name</label>
+                        <input name="client_name" type="text" class="form-control fit-content"  placeholder="City - Country" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Project Status</label>
+                        <input name="project_status" type="text" class="form-control fit-content"  placeholder="City - Country" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group">
                         <label for="exampleFormControlFile1" class="mb-0 pt-1">Pick an Image</label>
                         <p class="text-sm">image size should be 1170 * 623 </p>
                         <input name="project_img" type="file" class="form-control-file fit-content" id="exampleFormControlFile1">
@@ -140,11 +147,12 @@
             </form>
             </div>
         </div>
-    </div> <!-- end modal-->
+    </div>
+<!-- end modal-->
 
 
-    
-    {{-- modal of project_images's edit button --}}
+
+{{-- modal of project_images's edit button --}}
     @foreach ($all_projects as $project)
         <!-- Project Edit Modal -->
         <div class="modal fade" style="background-color:rgb(143 86 86 / 0%);"
