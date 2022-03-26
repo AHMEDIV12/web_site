@@ -323,11 +323,11 @@
                 <div class="modal-body text-bold">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Sub Title</label>
-                        <input name="sub_title" value="{{$header_meta['sub_title']}}" type="text" class="form-control" id="addField" aria-describedby="emailHelp" >
+                        <input name="sub_title" value="{{isset($header_meta['sub_title'])}}" type="text" class="form-control" id="addField" aria-describedby="emailHelp" >
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1"> Title</label>
-                        <input name="title" type="text" value="{{$header_meta['title']}}" class="form-control fit-content"  id="exampleInputPassword1">
+                        <input name="title" type="text" value="{{isset($header_meta['title'])}}" class="form-control fit-content"  id="exampleInputPassword1">
                     </div>
                     <div class="modal-footer">
                         <button  class="btn modal-btn" data-dismiss="modal">Close</button>
